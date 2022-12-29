@@ -19,7 +19,9 @@
     "vitest": "^0.26.2"
   },
   "dependencies": {
-    "@serverless-stack/node": "^1.18.4"
+    "@serverless-stack/node": "^1.18.4",
+    "aws-sdk": "^2.1284.0",
+    "uuid": "^9.0.0"
   },
   "workspaces": [
     "services"

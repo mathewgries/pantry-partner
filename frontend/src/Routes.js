@@ -1,0 +1,33 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+import Home from "./containers/Home";
+import Login from "./containers/Login";
+import Signup from "./containers/Signup";
+import NotFound from "./containers/NotFound";
+
+export default function Links() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/login"
+        element={
+          <UnauthenticatedRoute>
+            <Login />
+          </UnauthenticatedRoute>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <UnauthenticatedRoute>
+            <Signup />
+          </UnauthenticatedRoute>
+        }
+      />
+      <Route path="*" element={<NotFound />} />;
+    </Routes>
+  );
+}
