@@ -1,9 +1,18 @@
 .Home .lander {
-  padding: 80px 0;
   text-align: center;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .Home .lander h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+.site-menu-container {
+  width: 20%;
+}
+
+.home-list-container {
+  width: 80%;
 }

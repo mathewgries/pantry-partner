@@ -7,7 +7,7 @@ export function ApiStack({ stack, app }) {
   // Create the API
   const api = new Api(stack, "Api", {
     defaults: {
-			authorizer: "iam",
+      authorizer: "iam",
       function: {
         permissions: [table],
         environment: {
@@ -15,9 +15,10 @@ export function ApiStack({ stack, app }) {
         },
       },
     },
-		cors: true,
+    cors: true,
     routes: {
-      "POST /notes": "functions/create.main",
+      "POST /create": "functions/create.main",
+      "GET /list": "functions/list.main",
     },
   });
 
